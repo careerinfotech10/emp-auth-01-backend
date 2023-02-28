@@ -1,7 +1,7 @@
 #
 # Build stage
 #
-FROM maven:3.8.2-openjdk:8-jdk-alpine AS build
+FROM maven:3.8.2-jdk-8 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
