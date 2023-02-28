@@ -12,5 +12,5 @@ RUN mvn clean package -DskipTests
 FROM openjdk:8-jdk-alpine
 COPY --from=build /target/emp-1.jar emp.jar
 # ENV PORT=8080
-EXPOSE 7777
+EXPOSE 8080
 ENTRYPOINT ["java","-jar","emp.jar"]
